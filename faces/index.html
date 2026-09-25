@@ -12,36 +12,44 @@
     />
     <script type="module" src="/src/main.js"></script>
   </head>
-  <body>
-    <header class="site-header">
-      <a class="wordmark font-cursive" href="/">Faces by Sam</a>
-      <nav class="site-nav font-serif">
+  <body class="faces-page">
+    <header class="faces-hero">
+      <nav class="site-nav site-nav--stacked font-serif" aria-label="Primary">
         <a href="/faces/">faces</a>
         <a href="/">art</a>
         <a href="/contact/">contact</a>
         <a href="/calendar/">calendar</a>
         <a href="/about-me/">about me</a>
       </nav>
+      <a class="faces-hero__wordmark font-cursive" href="/">Faces by Sam</a>
+      <figure class="faces-hero__figure">
+        <img src="/Snowstorm1.JPG" alt="" />
+      </figure>
+      <div class="faces-hero__meta">
+        <p class="faces-hero__date font-serif">03/2025</p>
+        <h1 class="faces-hero__title">Snowstorm</h1>
+        <p class="faces-hero__handle font-serif">@nahimmasaint</p>
+      </div>
     </header>
 
-    <main>
-      <section class="shoot" id="snowstorm">
-        <h2 class="font-cursive">Snowstorm</h2>
-        <p class="font-serif shoot-meta">03/2025 &middot; @nahimmasaint</p>
-        <div class="shoot-grid shoot-grid--hero">
-          <img class="shoot-grid__hero" src="/Snowstorm1.JPG" alt="" />
-          <div class="shoot-grid__pair">
-            <img src="/Snowstorm2.JPG" alt="" />
-            <img src="/Snowstorm3.JPG" alt="" />
-          </div>
+    <main class="faces-main">
+      <section class="faces-runway" id="snowstorm">
+        <div class="faces-runway__pair">
+          <img src="/Snowstorm2.JPG" alt="" />
+          <img src="/Snowstorm3.JPG" alt="" />
         </div>
-        <p class="font-serif shoot-meta">@forasterogenesis &middot; @rduransigouin</p>
+        <p class="faces-credit font-serif">@forasterogenesis &middot; @rduransigouin</p>
       </section>
 
-      <section class="shoot" id="gaba-collective">
-        <h2 class="font-cursive">GABA Collective &mdash; Subcouture S03</h2>
-        <p class="font-serif shoot-meta">Vendredi 18 Septembre 2025, 19:00</p>
-        <div class="shoot-grid shoot-grid--quad">
+      <section class="faces-show" id="gaba-collective">
+        <div class="faces-show__titles">
+          <h2 class="faces-show__title">GABA COLLECTIVE</h2>
+          <h2 class="faces-show__title">SUBCOUTURE S03</h2>
+        </div>
+        <p class="faces-show__date font-serif">
+          Vendredi<br />18 Septembre 2025<br />19:00
+        </p>
+        <div class="faces-show__grid">
           <img src="/SUBCOUTURE S031.jpeg" alt="" />
           <img src="/SUBCOUTURE S032.jpeg" alt="" />
           <img src="/SUBCOUTURE S033.JPG" alt="" />
@@ -49,20 +57,21 @@
         </div>
       </section>
 
-      <section class="shoot" id="ecliptica">
-        <h2 class="font-cursive">Ecliptica</h2>
-        <p class="font-serif shoot-meta">14.11.2025</p>
-        <div class="shoot-grid">
+      <section class="faces-shoot faces-shoot--ecliptica" id="ecliptica">
+        <h2 class="faces-shoot__title">
+          Ecliptica <span class="faces-shoot__date font-serif">14.11.2025</span>
+        </h2>
+        <div class="faces-shoot__pair">
           <img src="/Ecliptica1.JPEG" alt="" />
           <img src="/Ecliptica2.JPEG" alt="" />
         </div>
       </section>
 
-      <section class="shoot" id="lasalle">
-        <h2 class="font-cursive">Lasalle<br />Fashion Show<br />2023</h2>
-        <div class="shoot-grid">
-          <img src="/LassalleFashionShow2023.png" alt="" />
-        </div>
+      <section class="faces-shoot faces-shoot--lasalle" id="lasalle">
+        <h2 class="faces-shoot__title faces-shoot__title--stacked">
+          Lasalle<br />Fashion<br />Show<br />2023
+        </h2>
+        <img class="faces-shoot__single" src="/LassalleFashionShow2023.png" alt="" />
       </section>
     </main>
 

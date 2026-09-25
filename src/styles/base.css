@@ -94,50 +94,474 @@ button {
   z-index: 10;
 }
 
-/* ---------- home / art page ---------- */
-.hero,
-.shoot-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 0.5rem;
+/* ---------- art page ---------- */
+.art-header {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2574 / 1500;
+  min-height: 560px;
 }
 
-.toc {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 3rem 1rem;
+.art-header img {
+  position: absolute;
+  object-fit: cover;
+  max-width: none;
+}
+
+.art-header__kit {
+  top: 3%;
+  left: 1%;
+  width: 23.3%;
+  aspect-ratio: 600 / 945;
+  z-index: 1;
+}
+
+.art-header__make {
+  top: 19%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 21.8%;
+  aspect-ratio: 560 / 910;
+  z-index: 2;
+}
+
+.art-header__studio {
+  top: 29.7%;
+  right: 1%;
+  width: 23.7%;
+  aspect-ratio: 610 / 950;
+  z-index: 2;
+}
+
+.art-header__wordmark {
+  position: absolute;
+  top: 0.5%;
+  left: 4%;
+  z-index: 3;
+  color: #fff;
+  mix-blend-mode: difference;
+  font-size: clamp(4rem, 13.3vw, 18.7rem);
+  line-height: 0.85;
+  white-space: nowrap;
+}
+
+.art-header__tagline {
+  position: absolute;
+  top: 66%;
+  left: 4.5%;
+  z-index: 3;
+  margin: 0;
+  font-size: clamp(1.25rem, 3.4vw, 4.25rem);
+}
+
+.art-header .site-nav--stacked {
+  position: absolute;
+  top: 4%;
+  right: 4%;
+  z-index: 4;
+}
+
+/* table of contents */
+.art-toc {
+  position: relative;
+  padding: 4vw 4%;
   text-align: center;
 }
 
+.art-toc__eyebrow {
+  margin: 0;
+  line-height: 1;
+  font-size: clamp(1rem, 3.4vw, 4rem);
+}
+
+.art-toc__title {
+  position: relative;
+  z-index: 2;
+  margin: 0 0 -2.4vw;
+  font-weight: 400;
+  line-height: 0.82;
+  font-size: clamp(2.5rem, 8vw, 11rem);
+}
+
+.art-toc__list {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.art-toc__list a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8vw;
+}
+
+.art-toc__list img {
+  height: clamp(80px, 7.4vw, 205px);
+  width: auto;
+  max-width: none;
+}
+
+.art-toc__list span {
+  font-size: clamp(0.6rem, 1.05vw, 1.15rem);
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+}
+
+/* shoot sections */
 .shoot {
-  padding: 2rem clamp(1.5rem, 5vw, 4rem);
+  padding: 5vw 4%;
 }
 
-.shoot h2 {
-  font-weight: normal;
-  font-size: clamp(1.75rem, 4vw, 3rem);
-  margin: 0 0 1rem;
+.shoot__title {
+  margin: 0;
+  font-weight: 400;
+  font-size: clamp(2rem, 6.6vw, 9rem);
+  line-height: 0.95;
+  letter-spacing: 0.01em;
 }
 
-.shoot-meta {
-  margin: 0 0 1rem;
-  opacity: 0.75;
+.shoot__title--center {
+  text-align: center;
 }
 
-.shoot-grid--hero {
-  grid-template-columns: 1.2fr 1fr;
+.shoot__title--wide {
+  font-size: clamp(2rem, 7.2vw, 10rem);
 }
 
-.shoot-grid__pair {
+.shoot__title--stacked {
+  line-height: 1.05;
+}
+
+.shoot__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.credits {
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  gap: 0.5rem;
+  grid-template-columns: auto auto;
+  column-gap: clamp(1rem, 3vw, 4rem);
+  row-gap: 0.12em;
+  margin: 0;
+  font-size: clamp(0.68rem, 1.1vw, 1.2rem);
+  line-height: 1.35;
 }
 
-.shoot-grid--quad {
-  grid-template-columns: repeat(2, 1fr);
+.credits dt,
+.credits dd {
+  margin: 0;
+}
+
+.credits--inline {
+  align-self: flex-start;
+  margin-left: auto;
+}
+
+.credits--center {
+  width: fit-content;
+  margin: 1.6vw auto 0;
+}
+
+.shoot__media {
+  display: flex;
+  gap: 2.5%;
+  margin-top: 3vw;
+}
+
+.shoot__media--duo {
+  justify-content: flex-start;
+}
+
+.shoot__media--duo img {
+  width: 31%;
+}
+
+.shoot__media--pair {
+  justify-content: center;
+  gap: 4%;
+}
+
+.shoot__media--pair img {
+  width: 18.5%;
+}
+
+.shoot__row {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5%;
+  margin-top: 2.5vw;
+}
+
+.shoot__row .shoot__img {
+  width: 22.5%;
+}
+
+.shoot--anastasia .anastasia {
+  display: grid;
+  grid-template-columns: 46% 1fr;
+  column-gap: 5%;
+  align-items: start;
+}
+
+.anastasia__left {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5vw;
+}
+
+.anastasia__left img {
+  width: 66%;
+}
+
+.anastasia__right {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5vw;
+}
+
+.anastasia__right img {
+  width: 62%;
+}
+
+.anastasia__right .credits {
+  margin-left: auto;
+}
+
+/* ---------- faces page ---------- */
+.faces-hero {
+  position: relative;
+  min-height: 200vh;
+  background: #000;
+  color: #fff;
+  overflow: hidden;
+}
+
+.faces-hero__wordmark {
+  position: absolute;
+  top: 2.5%;
+  left: 3%;
+  z-index: 3;
+  color: #fff;
+  mix-blend-mode: difference;
+  font-size: clamp(4.7rem, 16vw, 21.3rem);
+  line-height: 0.85;
+}
+
+.faces-hero .site-nav--stacked {
+  position: absolute;
+  top: 4%;
+  right: 4%;
+  z-index: 3;
+}
+
+.faces-hero .site-nav--stacked a {
+  color: #fff;
+}
+
+.faces-hero__figure {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+}
+
+.faces-hero__figure img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: auto;
+  max-width: none;
+  object-fit: cover;
+}
+
+.faces-hero__meta {
+  position: absolute;
+  top: 44%;
+  right: 5%;
+  z-index: 2;
+  text-align: right;
+}
+
+.faces-hero__date,
+.faces-hero__handle {
+  margin: 0;
+  font-size: clamp(0.8rem, 1.3vw, 1.4rem);
+}
+
+.faces-hero__title {
+  margin: 0.6vw 0;
+  font-weight: 400;
+  font-size: clamp(2rem, 5vw, 5.5rem);
+  line-height: 0.95;
+}
+
+.faces-runway {
+  padding: 4vw 4%;
+}
+
+.faces-runway__pair {
+  display: flex;
+  justify-content: center;
+  gap: 4%;
+}
+
+.faces-runway__pair img {
+  width: 32%;
+}
+
+.faces-credit {
+  margin: 1.5vw 0 0;
+  text-align: right;
+  font-size: clamp(0.7rem, 1.1vw, 1.2rem);
+}
+
+.faces-show {
+  position: relative;
+  padding: 4vw 4%;
+}
+
+.faces-show__titles {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.faces-show__title {
+  margin: 0;
+  font-weight: 400;
+  font-size: clamp(1.8rem, 5.6vw, 7.5rem);
+  line-height: 0.95;
+}
+
+.faces-show__date {
+  margin: 1.5vw 0 0;
+  font-size: clamp(0.8rem, 1.2vw, 1.3rem);
+  line-height: 1.45;
+}
+
+.faces-show__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5%;
+  margin-top: 3vw;
+}
+
+.faces-show__grid img {
+  width: 23%;
+}
+
+.faces-shoot {
+  padding: 4vw 4%;
+}
+
+.faces-shoot__title {
+  margin: 0;
+  font-weight: 400;
+  font-size: clamp(2rem, 6.6vw, 9rem);
+  line-height: 0.95;
+}
+
+.faces-shoot--ecliptica .faces-shoot__title {
+  text-align: center;
+}
+
+.faces-shoot__date {
+  font-size: 0.5em;
+}
+
+.faces-shoot__pair {
+  display: flex;
+  justify-content: center;
+  gap: 4%;
+  margin-top: 2vw;
+}
+
+.faces-shoot__pair img {
+  width: 30%;
+}
+
+.faces-shoot--lasalle {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.faces-shoot__title--stacked {
+  line-height: 1.02;
+}
+
+.faces-shoot__single {
+  width: 34%;
+}
+
+/* ---------- small screens ---------- */
+@media (max-width: 760px) {
+  .art-header {
+    aspect-ratio: auto;
+    min-height: 0;
+    padding: 7rem 1.25rem 1.5rem;
+  }
+
+  .art-header img {
+    position: static;
+    width: 100%;
+    aspect-ratio: auto;
+    margin-bottom: 0.5rem;
+  }
+
+  .art-header__wordmark {
+    position: static;
+    display: block;
+    margin-bottom: 1rem;
+    white-space: normal;
+    font-size: clamp(2.5rem, 16vw, 5rem);
+  }
+
+  .art-header__tagline {
+    position: static;
+    margin: 0.5rem 0 0;
+  }
+
+  .art-toc__list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem 1.25rem;
+  }
+
+  .shoot__media--duo img,
+  .shoot__media--pair img,
+  .shoot__row .shoot__img,
+  .anastasia__left img,
+  .anastasia__right img,
+  .faces-runway__pair img,
+  .faces-show__grid img,
+  .faces-shoot__pair img {
+    width: 46%;
+  }
+
+  .shoot__row,
+  .faces-shoot--lasalle {
+    flex-direction: column;
+  }
+
+  .shoot--anastasia .anastasia {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
 }
 
 /* ---------- contact page ---------- */
@@ -164,21 +588,24 @@ button {
 
 /* ---------- about-me page (scrapbook collage) ---------- */
 .about-page {
-  overflow-x: hidden;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.about-page .site-nav--stacked a {
+  color: #fff;
 }
 
 .about-collage {
   position: relative;
   width: 100%;
-  max-width: 1800px;
-  aspect-ratio: 2574 / 1420;
-  margin: 0 auto;
-  overflow: visible;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
 }
 
 .about-collage img {
   position: absolute;
-  width: auto;
   max-width: none;
 }
 
@@ -196,87 +623,259 @@ button {
   z-index: 1;
 }
 
-.about-collage__doll {
+.about-collage__gallery {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  transform: translateX(-9%);
+}
+
+.about-collage__gallery img {
+  height: 21%;
+  object-fit: cover;
+}
+
+.about-collage__gallery img:nth-child(1) {
   top: 1%;
   left: 1%;
-  width: 15%;
-  z-index: 2;
+  width: 16%;
+  height: 16.8%;
+  transform: rotate(-4deg);
 }
 
-.about-collage__mascara {
-  top: 27%;
-  left: 0;
-  width: 15%;
-  z-index: 2;
+.about-collage__gallery img:nth-child(2) {
+  top: 2%;
+  left: 19%;
+  width: 14%;
+  height: 29.4%;
+  transform: rotate(3deg);
 }
 
-.about-collage__filigree {
-  top: 58%;
+.about-collage__gallery img:nth-child(3) {
+  top: 1%;
+  left: 34%;
+  width: 17%;
+  height: 14.7%;
+  transform: rotate(-2deg);
+}
+
+.about-collage__gallery img:nth-child(4) {
+  top: 2%;
+  left: 34%;
+  width: 15%;
+  height: 37.8%;
+  transform: rotate(4deg);
+}
+
+.about-collage__gallery img:nth-child(5) {
+  top: 1%;
+  left: 48%;
+  width: 16%;
+  height: 21%;
+  transform: rotate(-3deg);
+}
+
+.about-collage__gallery img:nth-child(6) {
+  top: 2%;
+  left: 50%;
+  width: 14%;
+  height: 33.6%;
+  transform: rotate(3deg);
+}
+
+.about-collage__gallery img:nth-child(7) {
+  top: 23%;
   left: 0;
-  width: 12%;
-  height: 40%;
-  object-fit: contain;
-  transform: rotate(90deg);
-  transform-origin: left top;
-  translate: 0 0;
-  z-index: 1;
-  opacity: 0.75;
+  width: 15%;
+  height: 44.1%;
+  transform: rotate(2deg);
+}
+
+.about-collage__gallery img:nth-child(8) {
+  top: 22%;
+  left: 17%;
+  width: 13%;
+  height: 18.9%;
+  transform: rotate(-5deg);
+}
+
+.about-collage__gallery img:nth-child(9) {
+  top: 24%;
+  left: 31%;
+  width: 16%;
+  height: 27.3%;
+  transform: rotate(3deg);
+}
+
+.about-collage__gallery img:nth-child(10) {
+  top: 22%;
+  left: 30%;
+  width: 14%;
+  height: 48.3%;
+  transform: rotate(-2deg);
+}
+
+.about-collage__gallery img:nth-child(11) {
+  top: 23%;
+  left: 42%;
+  width: 17%;
+  height: 15.75%;
+  transform: rotate(4deg);
+}
+
+.about-collage__gallery img:nth-child(12) {
+  top: 22%;
+  left: 49%;
+  width: 15%;
+  height: 35.7%;
+  transform: rotate(-4deg);
+}
+
+.about-collage__gallery img:nth-child(13) {
+  top: 44%;
+  left: 1%;
+  width: 14%;
+  height: 23.1%;
+  transform: rotate(-3deg);
+}
+
+.about-collage__gallery img:nth-child(14) {
+  top: 43%;
+  left: 16%;
+  width: 17%;
+  height: 42%;
+  transform: rotate(2deg);
+}
+
+.about-collage__gallery img:nth-child(15) {
+  top: 45%;
+  left: 34%;
+  width: 13%;
+  height: 14.7%;
+  transform: rotate(5deg);
+}
+
+.about-collage__gallery img:nth-child(16) {
+  top: 43%;
+  left: 31%;
+  width: 15%;
+  height: 31.5%;
+  transform: rotate(-3deg);
+}
+
+.about-collage__gallery img:nth-child(17) {
+  top: 44%;
+  left: 44%;
+  width: 16%;
+  height: 19.95%;
+  transform: rotate(3deg);
+}
+
+.about-collage__gallery img:nth-child(18) {
+  top: 43%;
+  left: 50%;
+  width: 14%;
+  height: 46.2%;
+  transform: rotate(-2deg);
+}
+
+.about-collage__gallery img:nth-child(19) {
+  top: 65%;
+  left: 0;
+  width: 16%;
+  height: 25.2%;
+  transform: rotate(4deg);
+}
+
+.about-collage__gallery img:nth-child(20) {
+  top: 64%;
+  left: 18%;
+  width: 14%;
+  height: 39.9%;
+  transform: rotate(-3deg);
+}
+
+.about-collage__gallery img:nth-child(21) {
+  top: 66%;
+  left: 33%;
+  width: 18%;
+  height: 16.8%;
+  transform: rotate(2deg);
+}
+
+.about-collage__gallery img:nth-child(22) {
+  top: 64%;
+  left: 35%;
+  width: 15%;
+  height: 48.3%;
+  transform: rotate(-4deg);
+}
+
+.about-collage__gallery img:nth-child(23) {
+  top: 65%;
+  left: 46%;
+  width: 16%;
+  height: 22.05%;
+  transform: rotate(3deg);
+}
+
+.about-collage__gallery img:nth-child(1),
+.about-collage__gallery img:nth-child(2),
+.about-collage__gallery img:nth-child(3),
+.about-collage__gallery img:nth-child(4),
+.about-collage__gallery img:nth-child(7),
+.about-collage__gallery img:nth-child(8),
+.about-collage__gallery img:nth-child(9),
+.about-collage__gallery img:nth-child(10),
+.about-collage__gallery img:nth-child(11),
+.about-collage__gallery img:nth-child(13),
+.about-collage__gallery img:nth-child(17),
+.about-collage__gallery img:nth-child(18),
+.about-collage__gallery img:nth-child(19),
+.about-collage__gallery img:nth-child(22) {
+  mix-blend-mode: darken;
 }
 
 .about-collage__title {
   position: absolute;
-  top: 14%;
-  left: 16%;
-  width: 44%;
+  top: 17%;
+  left: 10%;
+  width: 38%;
   font-size: clamp(2rem, 4.2vw, 4.5rem);
   margin: 0;
-  z-index: 3;
+  padding: 0.1em 0.25em;
+  background: #fff;
+  z-index: 5;
 }
 
 .about-collage__bio {
   position: absolute;
-  top: 26%;
-  left: 16%;
-  width: 44%;
+  top: 31%;
+  left: 10%;
+  width: 38%;
   font-size: clamp(0.85rem, 1.15vw, 1.15rem);
   line-height: 1.7;
   margin: 0;
-  z-index: 3;
+  padding: 0.2em 0.25em;
+  background: #fff;
+  z-index: 5;
 }
 
 .about-collage__headshot {
-  top: 13%;
-  left: 61%;
-  width: 27%;
-  z-index: 2;
-  box-shadow: 0 0 0 6px #fff;
-}
-
-.about-collage__rose {
-  top: 0%;
-  left: 84%;
-  width: 11%;
+  top: 0;
+  right: 0;
+  left: auto;
+  height: 100%;
+  width: 45%;
+  object-fit: cover;
+  object-position: center;
   z-index: 3;
-}
-
-.about-collage__stickers {
-  top: 0%;
-  left: 56%;
-  width: 26%;
-  z-index: 3;
-}
-
-.about-collage__runway {
-  top: 78%;
-  left: 0%;
-  width: 22%;
-  z-index: 2;
 }
 
 .about-collage__flourish {
-  top: 68%;
-  left: 18%;
-  width: 62%;
+  top: 70%;
+  left: 15%;
+  width: 38%;
   z-index: 2;
 }
 
