@@ -298,43 +298,38 @@ button {
 .shoot__row {
   display: flex;
   align-items: flex-start;
-  gap: 2.5%;
+  gap: 2%;
   margin-top: 2.5vw;
 }
 
 .shoot__row .shoot__img {
-  width: 22.5%;
+  height: clamp(240px, min(80vh, 34vw), 1000px);
+  width: auto;
+  max-width: none;
 }
 
-.shoot--anastasia .anastasia {
-  display: grid;
-  grid-template-columns: 46% 1fr;
-  column-gap: 5%;
-  align-items: start;
+.shoot__row .credits--inline {
+  max-width: 38%;
 }
 
-.anastasia__left {
+.shoot__row .credits dd {
+  text-align: right;
+}
+
+.anastasia__row {
   display: flex;
-  flex-direction: column;
-  gap: 3.5vw;
+  align-items: flex-start;
+  gap: 2%;
+  margin-top: 2.5vw;
 }
 
-.anastasia__left img {
-  width: 66%;
+.anastasia__row img {
+  width: 30%;
 }
 
-.anastasia__right {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5vw;
-}
-
-.anastasia__right img {
-  width: 62%;
-}
-
-.anastasia__right .credits {
+.anastasia__row .credits {
   margin-left: auto;
+  max-width: 32%;
 }
 
 /* ---------- faces page ---------- */
@@ -544,23 +539,41 @@ button {
 
   .shoot__media--duo img,
   .shoot__media--pair img,
-  .shoot__row .shoot__img,
-  .anastasia__left img,
-  .anastasia__right img,
   .faces-runway__pair img,
   .faces-show__grid img,
   .faces-shoot__pair img {
     width: 46%;
   }
 
-  .shoot__row,
-  .faces-shoot--lasalle {
+  .shoot__row {
     flex-direction: column;
   }
 
-  .shoot--anastasia .anastasia {
-    grid-template-columns: 1fr;
-    row-gap: 2rem;
+  .shoot__row .shoot__img {
+    height: auto;
+    width: 100%;
+  }
+
+  .shoot__row .credits--inline {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .anastasia__row {
+    flex-direction: column;
+  }
+
+  .anastasia__row img {
+    width: 100%;
+  }
+
+  .anastasia__row .credits {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .faces-shoot--lasalle {
+    flex-direction: column;
   }
 }
 
