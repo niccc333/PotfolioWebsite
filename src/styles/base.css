@@ -649,11 +649,12 @@ button {
 }
 
 .about-collage__gallery img:nth-child(1) {
-  top: 1%;
-  left: 1%;
+  top: 6%;
+  left: 9%;
   width: 16%;
-  height: 16.8%;
+  height: auto;
   transform: rotate(-4deg);
+  z-index: 3;
 }
 
 .about-collage__gallery img:nth-child(2) {
@@ -673,14 +674,6 @@ button {
 }
 
 .about-collage__gallery img:nth-child(4) {
-  top: 2%;
-  left: 34%;
-  width: 15%;
-  height: 37.8%;
-  transform: rotate(4deg);
-}
-
-.about-collage__gallery img:nth-child(5) {
   top: 1%;
   left: 48%;
   width: 16%;
@@ -688,7 +681,7 @@ button {
   transform: rotate(-3deg);
 }
 
-.about-collage__gallery img:nth-child(6) {
+.about-collage__gallery img:nth-child(5) {
   top: 2%;
   left: 50%;
   width: 14%;
@@ -696,15 +689,7 @@ button {
   transform: rotate(3deg);
 }
 
-.about-collage__gallery img:nth-child(7) {
-  top: 23%;
-  left: 0;
-  width: 15%;
-  height: 44.1%;
-  transform: rotate(2deg);
-}
-
-.about-collage__gallery img:nth-child(8) {
+.about-collage__gallery img:nth-child(6) {
   top: 22%;
   left: 17%;
   width: 13%;
@@ -712,7 +697,7 @@ button {
   transform: rotate(-5deg);
 }
 
-.about-collage__gallery img:nth-child(9) {
+.about-collage__gallery img:nth-child(7) {
   top: 24%;
   left: 31%;
   width: 16%;
@@ -720,7 +705,7 @@ button {
   transform: rotate(3deg);
 }
 
-.about-collage__gallery img:nth-child(10) {
+.about-collage__gallery img:nth-child(8) {
   top: 22%;
   left: 30%;
   width: 14%;
@@ -728,7 +713,7 @@ button {
   transform: rotate(-2deg);
 }
 
-.about-collage__gallery img:nth-child(11) {
+.about-collage__gallery img:nth-child(9) {
   top: 23%;
   left: 42%;
   width: 17%;
@@ -736,7 +721,7 @@ button {
   transform: rotate(4deg);
 }
 
-.about-collage__gallery img:nth-child(12) {
+.about-collage__gallery img:nth-child(10) {
   top: 44%;
   left: 1%;
   width: 14%;
@@ -744,7 +729,7 @@ button {
   transform: rotate(-3deg);
 }
 
-.about-collage__gallery img:nth-child(13) {
+.about-collage__gallery img:nth-child(11) {
   top: 43%;
   left: 16%;
   width: 17%;
@@ -752,7 +737,7 @@ button {
   transform: rotate(2deg);
 }
 
-.about-collage__gallery img:nth-child(14) {
+.about-collage__gallery img:nth-child(12) {
   top: 45%;
   left: 34%;
   width: 13%;
@@ -760,7 +745,7 @@ button {
   transform: rotate(5deg);
 }
 
-.about-collage__gallery img:nth-child(15) {
+.about-collage__gallery img:nth-child(13) {
   top: 43%;
   left: 31%;
   width: 15%;
@@ -768,7 +753,7 @@ button {
   transform: rotate(-3deg);
 }
 
-.about-collage__gallery img:nth-child(16) {
+.about-collage__gallery img:nth-child(14) {
   top: 44%;
   left: 44%;
   width: 16%;
@@ -776,7 +761,7 @@ button {
   transform: rotate(3deg);
 }
 
-.about-collage__gallery img:nth-child(17) {
+.about-collage__gallery img:nth-child(15) {
   top: 43%;
   left: 50%;
   width: 14%;
@@ -784,7 +769,7 @@ button {
   transform: rotate(-2deg);
 }
 
-.about-collage__gallery img:nth-child(18) {
+.about-collage__gallery img:nth-child(16) {
   top: 65%;
   left: 0;
   width: 16%;
@@ -792,7 +777,7 @@ button {
   transform: rotate(4deg);
 }
 
-.about-collage__gallery img:nth-child(19) {
+.about-collage__gallery img:nth-child(17) {
   top: 66%;
   left: 33%;
   width: 18%;
@@ -800,7 +785,7 @@ button {
   transform: rotate(2deg);
 }
 
-.about-collage__gallery img:nth-child(20) {
+.about-collage__gallery img:nth-child(18) {
   top: 64%;
   left: 35%;
   width: 15%;
@@ -808,7 +793,7 @@ button {
   transform: rotate(-4deg);
 }
 
-.about-collage__gallery img:nth-child(21) {
+.about-collage__gallery img:nth-child(19) {
   top: 65%;
   left: 46%;
   width: 16%;
@@ -819,17 +804,15 @@ button {
 .about-collage__gallery img:nth-child(1),
 .about-collage__gallery img:nth-child(2),
 .about-collage__gallery img:nth-child(3),
-.about-collage__gallery img:nth-child(4),
+.about-collage__gallery img:nth-child(6),
 .about-collage__gallery img:nth-child(7),
 .about-collage__gallery img:nth-child(8),
 .about-collage__gallery img:nth-child(9),
 .about-collage__gallery img:nth-child(10),
-.about-collage__gallery img:nth-child(11),
-.about-collage__gallery img:nth-child(12),
+.about-collage__gallery img:nth-child(14),
+.about-collage__gallery img:nth-child(15),
 .about-collage__gallery img:nth-child(16),
-.about-collage__gallery img:nth-child(17),
-.about-collage__gallery img:nth-child(18),
-.about-collage__gallery img:nth-child(20) {
+.about-collage__gallery img:nth-child(18) {
   mix-blend-mode: darken;
 }
 
